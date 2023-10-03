@@ -1,0 +1,31 @@
+YEAR,COURSE,COURSE_ID,SEMESTER,ECTS,GRADE
+1,Redes de Computadores,INF32166,1S,6,15
+1,Introdução à Programação Orientada por Objetos,INF32146,1S,6,16
+1,Matemática I,INF32144,1S,6,12
+1,Introdução à Gestão de Empresas,INF32194,1S,3,14
+1,Economia,INF32193,1S,3,12
+1,Arquitetura Computacional e Microprocessadores,INF32192,1S,6,15
+1,Algoritmos e Tipos Abstratos de Dados,INF32153,2S,6,13
+1,Bases de Dados,INF32152,2S,6,15
+1,Análise Numérica,INF32151,2S,6,17
+1,Programação Orientada por Objetos,INF32150,2S,6,17
+1,Introdução à Programação para a Web,INF32198,2S,3,13
+1,Comportamento Organizacional e Gestão de Equipas,INF32203,2S,3,12
+2,Programação para a Web,INF32206,1S,6,17
+2,Sistemas Operativos,INF32154,1S,6,12
+2,Programação Avançada,INF32157,1S,6,18
+2,Matemática Discreta,INF32155,1S,6,16
+2,Complementos de Bases de Dados,INF32158,1S,6,18
+2,Computação Móvel,INF32186,2S,6,16
+2,Interação Pessoa-Máquina,INF32156,2S,6,17
+2,Desenvolvimento de Videojogos,INF32214,2S,6,17
+2,Métodos Estatísticos,INF32209,2S,6,15
+2,Computação Paralela e Distríbuida,INF32208,2S,6,15
+3,Engenharia de Software Aplicada,INF32213,A,12,14
+3,Programação Visual,INF32188,A,6,16
+3,Gestão de Projetos Informáticos,INF32210,1S,6,12
+3,Inteligência Artificial,INF32185,1S,6,15
+3,Inovação e Empreendedorismo,INF32211,1S,6,18
+3,Segurança e Informática,INF32215,1S,6,14
+3,Estágio/Projeto em Engenharia de Software,INF32201,2S,18,17
+3,Portfolio em Engenharia Informática,INF32212,2S,6,16

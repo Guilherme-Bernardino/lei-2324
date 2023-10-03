@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11b42d2d-374b-4b28-9ac5-d7fb40862d9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Iterator_Template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iterator_Examples_Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Iterator_Examples_Template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MAinTestIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MAinTestIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/EmptyStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/EmptyStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/FullStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/FullStackException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/StackArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/StackArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/StackLinked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/StackLinked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/stack/TADStackMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/stack/TADStackMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/BoundaryViolationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/BoundaryViolationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/EmptyTreeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/EmptyTreeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/InvalidPositionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/InvalidPositionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/NonEmptyTreeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/NonEmptyTreeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/TADTreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/TADTreeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pa/adts/tree/TreeLinked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pa/adts/tree/TreeLinked.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2Hj17wALkI4XALFsLqpxWIxjWfp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.TADTreeMain">
+    <configuration name="MAinTestIterator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MAinTestIterator" />
+      <module name="Iterator_Template" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TADStackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pa.adts.stack.TADStackMain" />
+      <module name="Iterator_Template" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pa.adts.stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TADTreeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pa.adts.tree.TADTreeMain" />
+      <module name="Iterator_Template" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pa.adts.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TADTreeMain" />
+        <item itemvalue="Application.TADStackMain" />
+        <item itemvalue="Application.MAinTestIterator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11b42d2d-374b-4b28-9ac5-d7fb40862d9f" name="Default Changelist" comment="" />
+      <created>1668783514935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668783514935</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="721" y="201" width="468" height="725" key="#com.intellij.ide.util.MemberChooser" timestamp="1668788463053">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="721" y="201" width="468" height="725" key="#com.intellij.ide.util.MemberChooser/0.40.1920.1040@0.40.1920.1040" timestamp="1668788463053" />
+    <state width="1866" height="189" key="GridCell.Tab.0.bottom" timestamp="1668789081212">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1866" height="189" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1668789081212" />
+    <state width="1866" height="189" key="GridCell.Tab.0.center" timestamp="1668789081209">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1866" height="189" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1668789081209" />
+    <state width="1866" height="189" key="GridCell.Tab.0.left" timestamp="1668789081208">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1866" height="189" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1668789081208" />
+    <state width="1866" height="189" key="GridCell.Tab.0.right" timestamp="1668789081209">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state width="1866" height="189" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1668789081209" />
+    <state x="332" y="107" width="1256" height="912" key="SettingsEditor" timestamp="1668789076962">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="332" y="107" width="1256" height="912" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1668789076962" />
+  </component>
+</project>
