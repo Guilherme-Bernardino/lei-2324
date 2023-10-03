@@ -1,0 +1,17 @@
+#			
+# data file: demo-stops			
+# 			
+stop_code	stop_name	lat	lon
+CBS	Castelo Branco	39.818732	-7.489239
+OVD	Oviedo	43.369147	-5.850537
+FAV	Faro	37.0233	-7.942198
+BIL	Bilbao	43.261055	-2.948689
+SMC	Salamanca	40.97042	-5.674751
+NZR	Nazaré	39.596846	-9.068728
+MAD	Madrid	40.395255	-3.677876
+LBO	Lisbon	38.767747	-9.100603
+COI	Coimbra	40.220224	-8.439456
+PGA	Porto	41.151826	-8.582975
+BXN	Barcelona (Sants)	41.379839	2.139349
+BDJ	Badajoz	38.866735	-6.974156
+VLD	Valladolid	41.641622	-4.732252

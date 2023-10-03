@@ -1,0 +1,17 @@
+#		
+# data file: demo-positions XY		
+# 		
+stop_code	x	y
+CBS	220	419
+OVD	346	52
+FAV	185	694
+PGA	135	284
+BXN	963	260
+BDJ	259	514
+VLD	432	233
+BIL	570	64
+SMC	360	302
+NZR	98	441
+MAD	514	361
+LBO	95	524
+COI	146	378

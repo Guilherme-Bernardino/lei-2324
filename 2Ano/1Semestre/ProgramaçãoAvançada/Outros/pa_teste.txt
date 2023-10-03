@@ -1,0 +1,287 @@
+Q1. Padrão Iterator
+
+public class StackLinked<E> implements Stack<E> {
+ 	private Node top;
+
+ 	private class Node{
+ 	private E elem;
+ 	private Node next;
+ 	public Node(E elem, Node next) {
+ 		this.elem = elem;
+ 		this.next = next;
+ 	}
+ }
+ public StackLinked() {
+ 	top=null;
+ }
+
+ @Override
+ public E pop() throws EmptyStackException {
+ 	E elem = top.elem;
+ 	top=top.next;
+ 	return elem;
+ }
+ //outros métodos
+
+ private class MyIterator implements Iterator<T> {
+ 	private Node cursor;
+ 	public MyIterator() {
+		cursor = top;
+ 	}
+
+ 	@Override
+ 	public boolean hasNext() {
+		return cursor.next != null;
+	}
+ 	@Override
+ 	public T next() {
+		T elem = cursor.elem;
+		cursor = cursor.next;
+		return elem;
+ 	}
+ }
+}
+
+Q3.
+//TODO 1
+Counter counter = new Counter(20);
+CounterPanel panel = new CounterPanel(counter);
+CounterController controller = new CounterController(counter, panel);
+
+public void next(){ //TODO 2
+	value++;
+	notifyObservers(this);
+}
+
+//TODO 3
+
+ public CounterController(Counter counter, CounterPanel counterPanel){ //TODO 3
+	this.counter = counter;
+	this.counterPanel = counterPanel;
+
+	this.counterPanel.setTriggers(this);
+	this.counter.addObserver(this.counterPanel);
+ }
+
+public void setTriggers(CounterController ctrl){
+ btn1.setOnAction((ActionEvent event) -> { //TODO 4
+	ctrl.doNext();
+ });
+ }
+ @Override
+ public void update(Object obj) { // TODO 5
+	if(obj instanceof Counter){
+		Counter c = (Counter) obj;
+		lblCounter.setText(c.getValue());
+	}
+ }
+
+
+Q8. Padrão Strategy
+public interface Strategy{ --> Strategy
+	//Calc Method
+	public int calStatistic(List <Integer> numberSequence);
+
+}
+
+public class StrategyA implements Strategy{ --> Concrete Strategy
+
+	public int calStatistic(List <Integer> numberSequence){
+		Collections.sort(s);
+ 		return (s.get(0)+ s.get(s.size()-1))/2;
+	}
+}
+
+public class StrategyB implements Strategy{ --> Concrete Strategy
+
+	public int calStatistic(List <Integer> numberSequence){
+		Collections.sort(s);
+		return s.get(s.size()-1/2);	
+	}
+}
+
+public class NumberSequence { --> Context
+	private List<Integer> s = new ArrayList<>();
+ 	public void add(int num) { s.add(num); }
+	
+	public Strategy strategy;
+	
+ 	public NumberSequence(){
+		this.strategy = new StrategyA();
+	}
+
+	public void changeStrategy(){
+		if(strategy == StrategyA()){
+			strategy = new StrategyB();
+		}
+	}
+
+	public int calcStatistic(){
+		if(s.isEmpty()) throw new SequenceException("Empty");
+		return strategy.calStatistic(s);
+	}
+}
+
+c)
+
+NumberSequence numberS = new NumberSequence();
+
+numberS.add(1);
+numberS.add(2);
+numberS.add(3);
+numberS.add(4);
+
+SOUT("StrategyA: " + calcStatistic());
+numberS.changeStrategy();
+SOUT("StrategyB: " + calcStatistic());
+
+------------
+@Override
+ public void start(Stage stage) throws Exception {
+ //TODO1
+ Document document = new Document("doc.txt");
+ DocumentPanel panel = new Document(document);
+ DocumentController controller = new DocumentController(document, panel);
+
+ Scene scene = new Scene(panel,200,200);
+ stage.setTitle("text make");
+ stage.setScene(scene);
+ stage.setResizable(false);
+ stage.show();
+ }
+
+public DocumentController(Document document, DocumentPanel documentPanel) {
+ this.document = document;
+ this.documentPanel = documentPanel; //TODO2
+
+ this.documentPanel.setTriggers(this);
+ this.document.addObserver(this.documentPanel);
+ }
+
+public void doAdd() { //TODO3
+	document.addWords(documentPanel.getInput());
+ }
+
+@Override
+ public void update(Object obj) { 
+	if(arg instaceof Document){
+		document = (Document) arg;
+		lblCounter.setText(doc.getCount());
+		textArea(doc.formatWordsList());
+	}
+ }
+
+ public void addWords(String word){ //TODO5
+	words.add(word);
+ }
+
+Q9 – Padrão Factory Method
+Considere que o código abaixo implementa o padrão FactoryMethod
+public interface DocStyle { --> Factory
+ public Document create(String type, String ...fields);
+}
+public class Informal implements DocStyle { --> ConcreteFactory
+ @Override
+ public Document create(String type, String... fields) {
+ switch (type) {
+ case "journal":
+ return new Journal(fields[0]);
+ case "letter":
+ return new InformalLetter(fields[0], fields[1]);
+ default:
+ throw new IllegalArgumentException("Not exist : " + type);
+ }
+ }
+}
+public abstract class Document { --> Product
+ private String name;
+ private String content;
+ public Document(String name) {
+ this.name = name;
+ this.content="";
+ }
+ //getters e setters
+}
+public class Journal extends Document{ --> ConcreteProduct
+ private Date date;
+ public Journal(String name) {
+ super(name);
+ this.date= new Date();
+ }
+ @Override
+ public String toString() {
+ return date + "\n" + getName() + "\n" + getContent();
+ }
+}
+public class InformalLetter extends Document{ --> ConcreteProduct
+ private String dst;
+ public InformalLetter(String name, String dst) {
+ super(name);
+ this.dst = dst;
+ }
+ @Override
+ public String toString() {
+ return dst + "\n" + getContent()+"\n\t"+getName();
+ }
+}
+---------
+public static void main(String[] args) {
+
+
+ Document d = new InformalLetter("Patricia", "Alberto");
+ d.setContent("FelizNatal");
+ System.out.println(d);
+}
+
+public class FormalStyle implements DocStyle{
+	@Override
+ 	public Document create(String type, String... fields) {
+ 		switch (type) {
+ 		case "journal":
+ 			return new Journal(fields[0]);
+ 		case "letter":
+ 			return new InformalLetter(fields[0], fields[1]);
+ 		default:
+ 			throw new IllegalArgumentException("Not exist : " + type);
+ 		}
+ 	}
+}
+
+----------------
+public class ListNumbers implements Originator {
+ 	private int size;
+ 	private List<Integer> numbers;
+ 	//...
+	@Override
+ 	public Memento createMemento() {
+		return new MyMemento(numbers);
+ 	}
+ 	public void setMemento(Memento saved) {
+		if(saved instanceof MyMemento){
+			saved.
+		}
+ 	}
+ 	private class MyMemento implements Memento {
+		private List state;
+		
+ 		public MyMemento(List<int> stateToSave) {
+			this.state = new ArrayList<>(stateToSave);
+ 		}
+ 	}
+}
+
+
+--------------------------
+Dijkstra
+
+visited = dafbegc
+unvisited = h 
+
+a- 5 	; d
+b- 9 	; d
+c- 17 	; b
+d- 0 	; -
+e- 14	; f
+f- 6	; d
+g- 17	; f
+h- inf	; -

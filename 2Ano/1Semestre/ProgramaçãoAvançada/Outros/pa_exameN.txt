@@ -1,0 +1,264 @@
+Q1 - Travessia de Árvores (1 val)
+R: 3-5-7-6-4-10-20-22-17-9
+
+Q2 - Padrão Simple Factory (1 val)
+public class GameFactory {
+ public static Game create(String type ) {
+	switch(type){
+		case "tetris" : return new TetrisGame();
+		case "snake"  : return new SnakeGame();
+		case "pong"   :	return new PongGame();
+		default : return null 
+	}	
+ }
+}
+
+Q3 - Modelação com grafos (1,5 val)
+(1,5 val) Dê um exemplo sucinto de um problema que representaria através de um dígrafo
+(grafo-orientado). Indique a assinatura e atributos dos tipos de dados (classes) que
+armazenaria nos vértices e nas arestas.
+
+
+
+Q4 - Algoritmo Dijkstra (1 val)
+(1 val) Considere o seguinte resultado do algoritmo Dijsktra sobre um grafo orientado
+(dígrafo) e valorado.
+Vértice Custo Predecessor
+A 1 D
+B 2 D
+C 5 F
+D 0
+E 1 D
+F 4 A
+G (infinito)
+Responda às seguintes questões:
+a) Qual o vértice de origem na execução do algoritmo? D
+b) Qual o custo do menor caminho até ao vértice C? 5
+c) Qual o caminho do vértice de origem até ao vértice C? D > A > F > C
+d) O vértice G é garantidamente um vértice isolado do dígrafo? (sim/não)? não
+
+Q5 - Algoritmia com árvores (1,5 val)
+(1,5 val) Considere a classe BST que representa uma árvore binária de pesquisa e que
+armazena inteiros.
+• Forneça o código do método countNodesWithBothSubtrees que retorna o número de
+nós que possuem ambas as sub-árvores. Recomenda-se uma abordagem recursiva.
+public class BST {
+ private BSTNode root;
+ //...
+ private class BSTNode {
+ int elem;
+ BSTNode leftTree;
+ BSTNode rightTree;
+ }
+ public int countNodesWithBothSubtrees() {
+	return countNodes(root);
+}
+
+public int countNodes(Node node){
+	int count = 0;
+	if(root == null){return count;}
+	if(node.left != null && node.right !=right){
+		count++;
+	}
+	return count + countNodes(node.left) + countNodes(node.right);
+}
+
+Q6 - Algoritmia com grafos (2 val)
+(2 val) Implemente o algoritmo Depth-First Search (ver anexo) no método abaixo.
+• Deve utilizar os métodos da interface Graph (ver anexo).
+• No passo process(v) deve simplesmente imprimir o vértice v.
+public static void dfs(Graph<V, E> graph, Vertex<V> vertice_root) {
+	List<Vertex<V>> visited = new ArrayList<>();
+	Stack<Vertex<V>> stack = new Stack<>();
+	
+	visited.add(vertice_root);
+	stack.push((vertice_root);
+
+	while(!stack.isEmpty()){
+		Vertex<V> vertex = stack.pop();
+		
+		for(Edge<V, E> e :this.incidentEdges(vertex )){
+			Vertex<V> w = this.opposite(v, e);
+			if(!visited.contains(w)){
+				visited.add(w);
+				stack.push(w);
+			}
+		}
+	}
+}
+
+Q7 - Padrão Strategy (1,5 val)
+Considere o padrão Strategy.
+a) (0,5 val) Em que categoria se insere (Criacional, Comportamental ou Estrutural)?
+
+R: Comportamental
+
+b) (0,5 val) Qual o problema que esse padrão propõe resolver?
+
+R:
+
+c) (0,5 val) Faça uma breve comparação entre esse padrão e o padrão Template Method
+(lecionado durante o refactoring) no que se refere ao problema que propõem resolver.
+
+R:
+
+
+Q8 - Padrão Iterador (1,5 val)
+(1,5 val) Considere o seguinte código parcial de uma implementação do ADT List, que utiliza
+como estrutura de dados uma lista simplesmente ligada.
+• Complete o código em falta por forma a que o iterador implementado devolva os
+elementos armazenados em posições pares {0, 2, 4, ...}.
+public class MyList<E> {
+ 	private Node first; /* reference of element at index 0*/
+ 	private int size;
+ 	public MyList() {
+ 	first = null;
+ }
+ private class Node {
+ 	private E elem;
+ 	private Node next;
+ }
+ private class MyIterator implements Iterator<E> {
+ 	private Node cursor;
+ 	public MyIterator() {
+		cursor = first;
+ 	}
+ 	public boolean hasNext() {
+		return cursor.next != null;
+ 	}
+	 public E next() {
+		E elem = cursor.elem;
+		cursor = cursor.next.next;
+		return elem;
+ 	}
+ }
+}
+
+
+Q10 - Padrão MVC (2 val)
+(2 val) Considere o código relativo à implementação do padrão MVC de uma aplicação que
+tem como concatenar uma string um asterisco (*) cada vez que se aciona o botão Append,
+sabendo que não é possível concatenar mais asteriscos quando o limite pré-configurado for
+atingido (ver figura abaixo); quando o limite é atingido deve ser mostrado um erro ao
+utilizador "Limite atingido.". Preencha o código em falta nas zonas TODO.
+
+public class Main extends Application {
+ //...
+ @Override
+ public void start(Stage stage) throws Exception { // TODO
+
+ Asterisks model = new Asterisks();
+ AsterisksPanel panel = new AsterisksPanel(model);
+ AsterisksController controller = new AsterisksController(model,panel );
+ Scene scene = new Scene(panel);
+ stage.setTitle("MVC App");
+ stage.setScene(scene);
+ stage.show();
+ }
+}
+public class Asterisks extends Subject {
+ private String value;
+ private int max;
+ public Asterisks(int max) {
+ this.max = max;
+ this.value = "";
+ }
+ public String getValue() {
+ 	return value;
+ }
+ public void append() throws AsteriskLimitException { //TODO
+	if(){
+		
+	}
+	value.concat("*");
+	notifyObservers(null);
+ }
+}
+
+public class AsterisksController {
+ public Asterisks asterisks;
+ public AsterisksPanel asterisksPanel;
+ public AsterisksController(Asterisks asterisks, AsterisksPanel asterisksPanel){ //TODO
+	this.asterisks = asterisks;
+	this.asterisksPanel = asterisksPanel;
+	
+	asterisks.addObserver(asterisksPanel);
+	asterisksPanel.setTriggers(this);
+ }
+ public void doNext() { //TODO
+	asterisks.append();
+ }
+}
+public class AsterisksPanel extends BorderPane implements Observer {
+ private Asterisks asterisks;
+ private Button btn1;
+ private Label lblAsterisks;
+ private Label lblError;
+ public AsterisksPanel(Asterisks asterisks) {
+ this.asterisks = asterisks;
+ createLayout();
+ }
+ private void createLayout() {
+ btn1= new Button("Append");
+ StackPane btnPane= new StackPane();
+ btnPane.getChildren().add(btn1);
+ lblAsterisks= new Label();
+ lblError= new Label();
+ setTop(btnPane);
+ setCenter(lblAsterisks);
+ setBottom(lblError);
+ update(null);
+ }
+ public void setTriggers(AsterisksController ctrl){
+ btn1.setOnAction((ActionEvent event) -> { //TODO
+	crtl.doNext();
+ });
+ }
+
+ @Override
+ public void update(Object obj) { // TODO
+	if(obj instanceof Asterisks)
+	{
+		lblAsterisks.setText(obj.getValue());
+	}
+ }
+}
+
+Q11 – Refactoring (4 val)
+Considere o código do Anexo - Refactoring.
+a) (1 val) Identifique os seguintes bad smells, indicado a(s) linha(s) onde ocorrem.
+Bad Smell Linha(s)
+
+Magic Number linha 29
+Primitive Obsession 
+Inappropriate Intimacy 
+Data Class linhas 2 a 5
+Refused Bequest linha 15
+
+b) (1 val) Para cada um dos bad smells, indique qual a técnica de refactoring que aplicará
+(se não souber o nome, descreva-a numa frase).
+• Magic Number: Substituir por constante;
+• Primitive Obsession: 
+• Inappropriate Intimacy:
+• Data Class: Extract method
+• Refused Bequest: 
+
+
+c) (2 val) Apresente o código final após a aplicação das técnicas de refactoring
+identificadas em b).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

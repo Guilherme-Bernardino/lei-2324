@@ -1,0 +1,31 @@
+@startuml
+left to right direction
+together {
+        interface Originator {
+                + Memento createMemento()
+                + void setMemento(Memento savedState)
+        }
+        interface Memento {
+                + List<Product> getState()
+        }
+        class MyMemento {
+                - List<Product> products
+                + MyMemento(List<Product> products)
+        }
+        class CareTaker {
+                - Originator originator
+                + void saveState()
+                + void restoreState()
+        }
+}
+class ShoppingCart {
+        - List<Product> products
+}
+
+Memento "1..*"--o CareTaker
+Memento <.. Originator : "<<use>>"
+Originator "1"<-- CareTaker
+Originator <|.. ShoppingCart
+Memento <|.. MyMemento
+ShoppingCart +-- MyMemento
+@enduml

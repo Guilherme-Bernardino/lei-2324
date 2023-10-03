@@ -1,0 +1,13 @@
+Porto Leiria 185
+Lisboa Porto 300
+Coimbra 10
+Lisboa Leiria 130
+Coimbra Évora 255
+Coimbra Faro 440
+Berlengas
+Évora Faro 215
+Lisboa Setúbal 50
+Setúbal Faro 245
+Bugio
+Faro Lisboa 280
+Leiria 5

@@ -1,0 +1,18 @@
+
+# data file: europe-routes
+
+stop_code_start	stop_code_end	distance
+BIL	SMC	405
+CBS	COI	110
+COI	LBO	200
+FAV	COI	450
+FAV	LBO	260
+LBO	CBS	245
+MAD	BXN	645
+MAD	SMC	210
+OVD	BIL	295
+OVD	BXN	925
+OVD	MAD	465
+PGA	FAV	610
+PGA	LBO	310
+SMC	BXN	865

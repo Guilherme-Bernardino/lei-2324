@@ -1,0 +1,18 @@
+##################################		
+# data file: europe-routes		
+##################################		
+stop_code_start	stop_code_end	duration
+CBS	COI	110
+COI	LBO	140
+FAV	LBO	230
+LBO	CBS	140
+MAD	SMC	165
+PGA	LBO	195
+PGA	FAV	365
+FAV	COI	265
+OVD	BXN	540
+MAD	BXN	395
+OVD	MAD	295
+OVD	BIL	180
+BIL	SMC	245
+SMC	BXN	670
