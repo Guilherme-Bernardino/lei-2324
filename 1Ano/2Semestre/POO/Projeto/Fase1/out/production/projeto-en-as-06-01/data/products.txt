@@ -1,0 +1,8 @@
+name,weight,type
+SmallToy,1.2,BRINQUEDO_PEQUENO
+BigToy,2.3,BRINQUEDO_GRANDE
+Shirt,0.5,ROUPA
+Bowtie,0.3,ACESSORIO
+ElectricToothbrush,0.3,ELETRONICO_PEQUENO
+Microwave,3,ELETRONICO_GRANDE
+Book,2,LIVRO

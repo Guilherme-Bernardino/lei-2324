@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Player
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Player\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
+comment1.params=
+comment1.target=Player()
+comment10.params=
+comment10.target=javafx.beans.property.ObjectProperty\ getLocalDateProperty()
+comment11.params=
+comment11.target=javafx.beans.property.DoubleProperty\ getDoubleProperty()
+comment2.params=name\ birthDate\ score
+comment2.target=Player(java.lang.String,\ java.time.LocalDate,\ double)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=name
+comment4.target=void\ setName(java.lang.String)
+comment5.params=
+comment5.target=java.time.LocalDate\ getBirthDate()
+comment6.params=date
+comment6.target=void\ setBirthDate(java.time.LocalDate)
+comment7.params=
+comment7.target=double\ getScore()
+comment8.params=score
+comment8.target=void\ setScore(double)
+comment9.params=
+comment9.target=javafx.beans.property.StringProperty\ getStringProperty()
+numComments=12

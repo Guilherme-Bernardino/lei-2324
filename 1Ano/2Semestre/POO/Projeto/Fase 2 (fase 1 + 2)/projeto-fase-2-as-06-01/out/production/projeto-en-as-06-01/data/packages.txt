@@ -1,0 +1,8 @@
+name,weight,type,isready
+Ball,3.4,BRINQUEDO_PEQUENO,1
+BigToyCar,32.2,BRINQUEDO_GRANDE,1
+LeatherPants,12.2,ROUPA,1
+Cap,5.3,ACESSORIO,1
+Flashlight,2.5,ELETRONICO_PEQUENO,1
+WashingMachine,212.2,ELETRONICO_GRANDE,1
+Diary,23.2,LIVRO,1

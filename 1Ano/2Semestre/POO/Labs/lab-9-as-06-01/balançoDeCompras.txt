@@ -1,0 +1,12 @@
+---------------------------------
+Compra nº 0
+Comprado por: sadsadasdad	NIF: 123456789
+Em: 2023-05-20 17:47:52
+
+Descrição:
+- Caixa de café Descafeinado com um custo de 4.5€
+- Caixa de café Descafeinado com um custo de 4.5€
+
+Valor total: 9.0€
+---------------------------------
+Total da loja: 9.0€

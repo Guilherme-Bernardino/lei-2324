@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=GamePane
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ GamePane\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
+comment1.params=primaryStage
+comment1.target=GamePane(javafx.stage.Stage)
+comment2.params=primaryStage
+comment2.target=void\ init(javafx.stage.Stage)
+comment3.params=row\ column\ gridPane
+comment3.target=TileButton\ getNodeByRowColumnIndex(int,\ int,\ javafx.scene.layout.GridPane)
+comment4.params=primaryStage
+comment4.target=javafx.scene.layout.HBox\ getGameMenu(javafx.stage.Stage)
+numComments=5

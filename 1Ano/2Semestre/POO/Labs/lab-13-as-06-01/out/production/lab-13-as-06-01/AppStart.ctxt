@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=AppStart
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ JavaFX\ AppStart\ aqui.\r\n\r\n\ @author\ (seu\ nome\ aqui)\r\n\ @version\ (n\u00FAmero\ da\ vers\u00E3o\ ou\ data\ aqui)\r\n
+comment1.params=primaryStage
+comment1.target=void\ start(javafx.stage.Stage)
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+numComments=3

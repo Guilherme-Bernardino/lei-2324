@@ -1,0 +1,10 @@
+positionX,positionY,type
+15,6,AGC
+15,10,TC
+17,6,AGC
+17,10,TC
+19,6,AGC
+19,10,TC
+12,6,ULC
+12,8,ULC
+12,10,ULC

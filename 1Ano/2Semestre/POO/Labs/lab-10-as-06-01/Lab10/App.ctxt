@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=App
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ JavaFX\ Main\ aqui.\r\n\r\n\ @author\ (seu\ nome\ aqui)\r\n\ @version\ (n\u00FAmero\ da\ vers\u00E3o\ ou\ data\ aqui)\r\n
+comment1.params=stage
+comment1.target=void\ start(javafx.stage.Stage)
+comment1.text=\r\n\ O\ m\u00E9todo\ start\ \u00E9\ o\ principal\ ponto\ de\ entrada\ para\ aplicativos\ JavaFX\ .\ \r\n\ \u00C9\ chamado\ ap\u00F3s\ o\ m\u00E9todo\ init()\ ter\ retornado\ e\ ap\u00F3s\r\n\ o\ sistema\ estar\ pronto\ para\ a\ aplica\u00E7\u00E3o\ iniciar\ a\ executar\r\n\r\n\ @param\ \ stage\ o\ palco\ ('scene')\ prim\u00E1rio\ desta\ aplica\u00E7\u00E3o.\r\n
+comment2.params=event
+comment2.target=void\ buttonClick(javafx.event.ActionEvent)
+comment2.text=\r\n\ Isto\ ser\u00E1\ executado\ quando\ o\ bot\u00E3o\ for\ pressionado\r\n\ O\ m\u00E9todo\ incrementa\ o\ contador\ em\ uma\ unidade\r\n
+numComments=3

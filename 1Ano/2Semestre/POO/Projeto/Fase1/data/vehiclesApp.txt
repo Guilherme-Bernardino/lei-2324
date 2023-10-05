@@ -1,0 +1,10 @@
+positionX,positionY,type
+-408,-20,AGC
+-408,-40,TC
+-408,-60,AGC
+-408,0,TC
+-408,20,AGC
+-408,40,TC
+-408,60,ULC
+-408,80,ULC
+-408,-80,ULC
