@@ -1,0 +1,121 @@
+!
+version 12.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!Hostname do Switch 0
+hostname Switch0
+!Password e secret para este Router
+enable secret 5 $1$mERr$UoSyTJlbm/P2Fq3rnQCA.0
+enable password class
+!
+!
+!Domain name ips.pt
+ip domain-name ips.pt
+!SSH - Username admin com a pass cisco_ssh
+username admin secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!Configuração da interface FastEthernet0/1 (trunk)
+interface FastEthernet0/1
+ switchport mode trunk
+!Configuração da interface FastEthernet0/2 (trunk)
+interface FastEthernet0/2
+!Configuração da interface FastEthernet0/3 (trunk)
+interface FastEthernet0/3
+!Configuração da interface FastEthernet0/4 (trunk)
+interface FastEthernet0/4
+!Configuração da interface FastEthernet0/5 (vlan 80)
+interface FastEthernet0/5
+ switchport access vlan 80
+!Configuração da interface FastEthernet0/6 (vlan 80)
+interface FastEthernet0/6
+ switchport access vlan 80
+!Configuração da interface FastEthernet0/7 (vlan 30)
+interface FastEthernet0/7
+ switchport access vlan 30
+!Configuração da interface FastEthernet0/8 (vlan 30)
+interface FastEthernet0/8
+ switchport access vlan 30
+!Configuração da interface FastEthernet0/9 (vlan 30)
+interface FastEthernet0/9
+ switchport access vlan 30
+!Configuração da interface FastEthernet0/10 (vlan 15)
+interface FastEthernet0/10
+ switchport access vlan 15
+!Configuração da interface FastEthernet0/11 (vlan 15)
+interface FastEthernet0/11
+ switchport access vlan 15
+!Configuração da interface FastEthernet0/12 (vlan 15)
+interface FastEthernet0/12
+ switchport access vlan 15
+!Configuração da interface FastEthernet0/13 (vlan 20)
+interface FastEthernet0/13
+ switchport access vlan 20
+!Configuração da interface FastEthernet0/14 (vlan 25)
+interface FastEthernet0/14
+ switchport access vlan 25
+!Configuração da interface FastEthernet0/15 (vlan 5)
+interface FastEthernet0/15
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/16 (vlan 5)
+interface FastEthernet0/16
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/17 (vlan 5)
+interface FastEthernet0/17
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/18 (vlan 5)
+interface FastEthernet0/18
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/19 (vlan 5)
+interface FastEthernet0/19
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/20 (vlan 5)
+interface FastEthernet0/20
+ switchport access vlan 5
+!Configuração da interface FastEthernet0/21 (desligado)
+interface FastEthernet0/21
+ shutdown
+!Configuração da interface FastEthernet0/22 (desligado)
+interface FastEthernet0/22
+ shutdown
+!Configuração da interface FastEthernet0/23 (desligado)
+interface FastEthernet0/23
+ shutdown
+!Configuração da interface FastEthernet0/24 (desligado)
+interface FastEthernet0/24
+ shutdown
+!Configuração da Vlan1
+interface Vlan1
+ no ip address
+ shutdown
+!Message of the day
+banner motd &
+*********************************
+           BEM-VINDO
+*********************************
+&
+!
+!
+!Login do router
+line con 0
+ password cisco
+ login
+!Telnet e SSH login e config
+line vty 0 4
+ password cisco
+ login local
+ transport input ssh
+line vty 5 15
+ password cisco
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+

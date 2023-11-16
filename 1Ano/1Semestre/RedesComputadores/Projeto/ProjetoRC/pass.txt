@@ -1,0 +1,8 @@
+
+password telnet: cisco
+password ssh: cisco_ssh
+
+
+password da consola : cisco
+enable password: class
+enable secret password: class1

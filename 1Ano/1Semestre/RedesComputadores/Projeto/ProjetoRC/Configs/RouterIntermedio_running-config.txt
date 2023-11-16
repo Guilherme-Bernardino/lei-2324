@@ -1,0 +1,148 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!Hostname do Router Intermedio
+hostname RouterIntermedio
+!
+!
+!Criação das pools do DHCP
+!IPs Gateway das VLAN's correspondentes
+!DNS Server 192.168.10.229 (VLAN 80)
+ip dhcp pool Arquivo
+ network 192.168.10.216 255.255.255.252
+ default-router 192.168.10.218
+ dns-server 192.168.10.229
+ip dhcp pool Informatica
+ network 192.168.10.220 255.255.255.252
+ default-router 192.168.10.222
+ dns-server 192.168.10.229
+ip dhcp pool Secretariado
+ network 192.168.10.224 255.255.255.252
+ default-router 192.168.10.226
+ dns-server 192.168.10.229
+ip dhcp pool Vending
+ network 192.168.10.208 255.255.255.248
+ default-router 192.168.10.214
+ dns-server 192.168.10.229
+ip dhcp pool Impressoras
+ network 192.168.10.200 255.255.255.248
+ default-router 192.168.10.206
+ dns-server 192.168.10.229
+ip dhcp pool Contabilidade
+ network 192.168.10.192 255.255.255.248
+ default-router 192.168.10.198
+ dns-server 192.168.10.229
+ip dhcp pool Comercial
+ network 192.168.10.184 255.255.255.248
+ default-router 192.168.10.190
+ dns-server 192.168.10.229
+ip dhcp pool Administracao
+ network 192.168.10.176 255.255.255.248
+ default-router 192.168.10.182
+ dns-server 192.168.10.229
+ip dhcp pool Microcontroladores
+ network 192.168.10.168 255.255.255.248
+ default-router 192.168.10.174
+ dns-server 192.168.10.229
+ip dhcp pool Gestao
+ network 192.168.10.160 255.255.255.248
+ default-router 192.168.10.166
+ dns-server 192.168.10.229
+ip dhcp pool Integracao
+ network 192.168.10.144 255.255.255.240
+ default-router 192.168.10.158
+ dns-server 192.168.10.229
+ip dhcp pool Desenvolvimento
+ network 192.168.10.128 255.255.255.240
+ default-router 192.168.10.142
+ dns-server 192.168.10.229
+ip dhcp pool Wifi_Guest
+ network 192.168.10.96 255.255.255.224
+ default-router 192.168.10.126
+ dns-server 192.168.10.229
+ip dhcp pool VOIP
+ network 192.168.10.64 255.255.255.224
+ default-router 192.168.10.94
+ dns-server 192.168.10.229
+ip dhcp pool Wifi_Internet
+ network 192.168.10.0 255.255.255.192
+ default-router 192.168.10.62
+ dns-server 192.168.10.229
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!Configuração da interface FastEthernet0/0
+interface FastEthernet0/0
+ ip address 192.168.60.1 255.255.255.0
+ duplex auto
+ speed auto
+!Configuração da interface FastEthernet0/1
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!Configuração da interface GigabitEthernet0/0/0
+interface GigabitEthernet0/0/0
+ ip address 192.168.40.2 255.255.255.252
+!Configuração da interface GigabitEthernet0/1/0
+interface GigabitEthernet0/1/0
+ ip address 192.168.30.2 255.255.255.252
+!Configuração da Vlan1
+interface Vlan1
+ no ip address
+ shutdown
+!Configuração do RIP (routing protocol)
+!Rede sede, ISP e redes sucursal e armazem
+router rip
+ network 192.168.0.0
+ network 192.168.1.0
+ network 192.168.10.0
+ network 192.168.20.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.60.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

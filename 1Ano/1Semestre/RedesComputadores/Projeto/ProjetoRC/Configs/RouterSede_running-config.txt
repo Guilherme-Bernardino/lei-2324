@@ -1,0 +1,204 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!Hostname do Router da Sede
+hostname Sede
+!
+!
+!Pasword e secret para este Router
+enable secret 5 $1$mERr$UoSyTJlbm/P2Fq3rnQCA.0
+enable password class
+!
+!
+!Pools de DHCP
+ip dhcp pool sede
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.168.1.2
+ domain-name HTTP://www.rcmobile.pt
+ip dhcp pool Desenvolvimento_de_Software_e_Aplicacoes
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 192.168.1.2
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!SSH - Username admin com a pass cisco_ssh
+username admin password 0 cisco_ssh
+!
+!
+!
+!
+!
+!
+!
+!Domain name ips.pt
+ip domain-name ips.pt
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!Configuração da interface FastEthernet0/0
+interface FastEthernet0/0
+ ip address 192.168.50.1 255.255.255.0
+ duplex auto
+ speed auto
+!Configuração da subinterface FastEthernet0/0.10
+interface FastEthernet0/0.10
+ encapsulation dot1Q 10
+ no ip address
+ ip helper-address 192.168.1.2
+ ip helper-address 192.168.90.2
+!Configuração da subinterface FastEthernet0/0.90
+interface FastEthernet0/0.90
+ encapsulation dot1Q 90
+ ip address 192.168.90.1 255.255.255.0
+!Configuração da interface FastEthernet0/1
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!Configuração da subinterface FastEthernet0/1.5 (Vlan 5)
+interface FastEthernet0/1.5
+ encapsulation dot1Q 5
+ ip address 192.168.10.166 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.10 (Vlan 10)
+interface FastEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.94 255.255.255.224
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.15 (Vlan 15)
+interface FastEthernet0/1.15
+ encapsulation dot1Q 15
+ ip address 192.168.10.206 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.20 (Vlan 20)
+interface FastEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.10.62 255.255.255.192
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.25 (Vlan 25)
+interface FastEthernet0/1.25
+ encapsulation dot1Q 25
+ ip address 192.168.10.126 255.255.255.224
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.30 (Vlan 30)
+interface FastEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 192.168.10.214 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.35 (Vlan 35)
+interface FastEthernet0/1.35
+ encapsulation dot1Q 35
+ ip address 192.168.10.142 255.255.255.240
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.40 (Vlan 40)
+interface FastEthernet0/1.40
+ encapsulation dot1Q 40
+ ip address 192.168.10.218 255.255.255.252
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.45 (Vlan 45)
+interface FastEthernet0/1.45
+ encapsulation dot1Q 45
+ ip address 192.168.10.226 255.255.255.252
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.50 (Vlan 50)
+interface FastEthernet0/1.50
+ encapsulation dot1Q 50
+ ip address 192.168.10.182 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.55 (Vlan 55)
+interface FastEthernet0/1.55
+ encapsulation dot1Q 55
+ ip address 192.168.10.198 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.60 (Vlan 60)
+interface FastEthernet0/1.60
+ encapsulation dot1Q 60
+ ip address 192.168.10.190 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.65 (Vlan 65)
+interface FastEthernet0/1.65
+ encapsulation dot1Q 65
+ ip address 192.168.10.222 255.255.255.252
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.70 (Vlan 70)
+interface FastEthernet0/1.70
+ encapsulation dot1Q 70
+ ip address 192.168.10.158 255.255.255.240
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.75 (Vlan 75)
+interface FastEthernet0/1.75
+ encapsulation dot1Q 75
+ ip address 192.168.10.174 255.255.255.248
+ ip helper-address 192.168.10.229
+!Configuração da subinterface FastEthernet0/1.80 (Vlan 80)
+interface FastEthernet0/1.80
+ encapsulation dot1Q 80
+ ip address 192.168.10.230 255.255.255.252
+ ip helper-address 192.168.10.229
+!Configuração da interface GigabitEthernet0/1/0
+interface GigabitEthernet0/1/0
+ ip address 192.168.30.1 255.255.255.252
+!Configuração da Vlan1
+interface Vlan1
+ no ip address
+ shutdown
+!Configuração do RIP (routing protocol)
+!Rede sede, ISP e redes sucursal e armazem
+router rip
+ network 192.168.0.0
+ network 192.168.10.0
+ network 192.168.20.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.50.0
+ network 192.168.60.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!Message of the day
+banner motd &
+*************************************
+             BEM-VINDO
+*************************************
+&
+!
+!
+!
+!
+!Login do router (telnet)
+line con 0
+ password cisco
+ login
+!
+line aux 0
+!Telnet e SSH login e config
+line vty 0 4
+ exec-timeout 3 0
+ password cisco
+ login local
+ transport input ssh
+line vty 5 15
+ password cisco
+ login local
+ transport input ssh
+!
+!
+!
+end
+

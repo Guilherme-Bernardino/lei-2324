@@ -1,0 +1,84 @@
+!
+version 12.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!Hostname do Router Sucursal
+hostname RouterSucursal
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!Configuração da interface FastEthernet0/0
+interface FastEthernet0/0
+ ip address 192.168.20.1 255.255.255.0
+ duplex auto
+ speed auto
+!Configuração da interface FastEthernet0/1
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!Configuração da interface GigabitEthernet0/1/0
+interface GigabitEthernet0/1/0
+ ip address 192.168.40.1 255.255.255.252
+!Configuração da Vlan1
+interface Vlan1
+ no ip address
+ shutdown
+!Configuração do RIP (routing protocol)
+!Rede sede, ISP e redes sucursal e armazem
+router rip
+ network 192.168.0.0
+ network 192.168.1.0
+ network 192.168.20.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.60.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
